@@ -1,0 +1,49 @@
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ============================================================
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | INÍCIO DO DIMENSIONAMENTO — TechPipe BIM Elétrico
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | Entrada | P=5500W | V=220V | sistema=monofasico | L=40m | T=35°C | agrup=1
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ETAPA 1: Calculando corrente de projeto...
+2026-05-12 22:18:13 | INFO     | app.calculations.corrente | Corrente calculada | Sistema: monofasico | P=5500W | V=220V | fp=1.0 | I_nominal=25.00A | I_projeto=25.00A
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ETAPA 2: Aplicando fatores de correção...
+2026-05-12 22:18:13 | INFO     | app.calculations.fatores_correcao | Temperatura 35°C → interpolado entre 30°C(1.0) e 35°C(0.94) → fator=0.94
+2026-05-12 22:18:13 | INFO     | app.calculations.fatores_correcao | Agrupamento: 1 circuitos → fator=1.0
+2026-05-12 22:18:13 | INFO     | app.calculations.fatores_correcao | Fatores combinados | Temp=0.94 × Agrup=1.0 = 0.94 | I_projeto=25.0A → I_final=26.6A
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ETAPA 3: Selecionando cabo por ampacidade...
+2026-05-12 22:18:13 | INFO     | app.calculations.ampacidade | Cabo selecionado: 4.0mm² cobre | Ampacidade=28.0A | Margem=5.0%
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ETAPA 4: Verificando queda de tensão...
+2026-05-12 22:18:13 | INFO     | app.calculations.queda_tensao | Queda de tensão | I=25.0A | L=40m | S=4.0mm² | ΔV=8.93V (4.06%) | Limite=4.0% | REPROVADO
+2026-05-12 22:18:13 | WARNING  | app.motor_dimensionamento | Queda de tensão 4.06% excede 4.0%. Calculando seção mínima para queda de tensão...
+2026-05-12 22:18:13 | INFO     | app.calculations.queda_tensao | Seção mínima queda tensão: 4.06mm² → Normalizada: 6.0mm²
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | Cabo aumentado de 4.0mm² para 6.0mm² por exigência de queda de tensão.
+2026-05-12 22:18:13 | INFO     | app.calculations.queda_tensao | Queda de tensão | I=25.0A | L=40m | S=6.0mm² | ΔV=5.95V (2.71%) | Limite=4.0% | APROVADO
+2026-05-12 22:18:13 | INFO     | app.calculations.ampacidade | Verificação cabo 6.0mm² cobre: APROVADO | Ampacidade=36.0A | I_dim=26.6A | Margem=26.1%
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ETAPA 5: Dimensionando disjuntor...
+2026-05-12 22:18:13 | INFO     | app.calculations.disjuntores | Curva selecionada: B para carga tipo 'resistiva'
+2026-05-12 22:18:13 | INFO     | app.calculations.disjuntores | Disjuntor | In=25A | Curva=B | Icu=3.0kA | Regra NBR5410: 25.0≤25≤36.0 → OK
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ETAPA 6: Dimensionando conduíte...
+2026-05-12 22:18:13 | INFO     | app.calculations.conduites | Área cabos | 3x 6.0mm² | A_unit=20.0mm² | A_total=60.0mm²
+2026-05-12 22:18:13 | INFO     | app.calculations.conduites | Conduíte | DN=20mm | Tipo=PVC_rigido | Ocupação=29.9% (limite 40%)
+2026-05-12 22:18:13 | INFO     | app.calculations.conduites | Conduíte completo: 3 condutores 6.0mm² → DN20mm PVC_rigido
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | FIM DO DIMENSIONAMENTO
+2026-05-12 22:18:13 | INFO     | app.motor_dimensionamento | ============================================================
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ============================================================
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | INÍCIO DO DIMENSIONAMENTO — TechPipe BIM Elétrico
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | Entrada | P=5500.0W | V=220.0V | sistema=monofasico | L=5.0m | T=70.0°C | agrup=1
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ETAPA 1: Calculando corrente de projeto...
+2026-05-12 19:44:43 | INFO     | app.calculations.corrente | Corrente calculada | Sistema: monofasico | P=5500.0W | V=220.0V | fp=0.85 | I_nominal=29.41A | I_projeto=29.41A
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ETAPA 2: Aplicando fatores de correção...
+2026-05-12 19:44:43 | WARNING  | app.calculations.fatores_correcao | Temperatura 70.0°C ACIMA do limite da tabela! Verificar viabilidade da instalação. Fator=0.5
+2026-05-12 19:44:43 | INFO     | app.calculations.fatores_correcao | Agrupamento: 1 circuitos → fator=1.0
+2026-05-12 19:44:43 | INFO     | app.calculations.fatores_correcao | Fatores combinados | Temp=0.5 × Agrup=1.0 = 0.5 | I_projeto=29.41A → I_final=58.82A
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ETAPA 3: Selecionando cabo por ampacidade...
+2026-05-12 19:44:43 | INFO     | app.calculations.ampacidade | Cabo selecionado: 16.0mm² cobre | Ampacidade=68.0A | Margem=13.5%
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ETAPA 4: Verificando queda de tensão...
+2026-05-12 19:44:43 | INFO     | app.calculations.queda_tensao | Queda de tensão | I=29.41A | L=5.0m | S=16.0mm² | ΔV=0.33V (0.15%) | Limite=4.0% | APROVADO
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ETAPA 5: Dimensionando disjuntor...
+2026-05-12 19:44:43 | INFO     | app.calculations.disjuntores | Curva selecionada: C para carga tipo 'indutiva'
+2026-05-12 19:44:43 | INFO     | app.calculations.disjuntores | Disjuntor | In=32A | Curva=C | Icu=3.0kA | Regra NBR5410: 29.41≤32≤68.0 → OK
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ETAPA 6: Dimensionando conduíte...
+2026-05-12 19:44:43 | INFO     | app.calculations.conduites | Área cabos | 2x 16.0mm² | A_unit=43.0mm² | A_total=86.0mm²
+2026-05-12 19:44:43 | INFO     | app.calculations.conduites | Conduíte | DN=25mm | Tipo=aco_galvanizado | Ocupação=22.6% (limite 40%)
+2026-05-12 19:44:43 | INFO     | app.calculations.conduites | Conduíte completo: 2 condutores 16.0mm² → DN25mm aco_galvanizado
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | FIM DO DIMENSIONAMENTO
+2026-05-12 19:44:43 | INFO     | app.motor_dimensionamento | ============================================================

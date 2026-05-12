@@ -1,0 +1,15 @@
+# TechPipe BIM Elétrico — Dependências
+# Fase 1 (motor de cálculos terminal): sem dependências externas — Python puro
+
+# Fase 2 (interface gráfica desktop):
+# tkinter  ← já vem com Python
+
+# Fase 3 (integração Revit):
+# pyrevit   ← instalado via extensão
+# numpy
+# pandas
+# reportlab
+# SQLAlchemy
+
+# Para instalar dependências futuras:
+# pip install numpy pandas reportlab sqlalchemy
